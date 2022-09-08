@@ -4,9 +4,13 @@ import time
 import json
 import requests
 import traceback
+import os
 from datetime import datetime
 # from rtx_helper import RTXHelper
 
+
+username = os.environ.get('USERNAME')
+password = os.environ.get('PASSWORD')
 
 def pushplus(msg: str, pushplus_token):
     if pushplus_token == "":
@@ -24,7 +28,7 @@ def pushplus(msg: str, pushplus_token):
     print("消息发送成功")
 
 
-def yqtb(username, password, name, params):
+def yqtb(name, params):
     session = requests.session()
     url = "https://yqtb.nwpu.edu.cn/wx/ry/jrsb.jsp"
     post_url = "https://yqtb.nwpu.edu.cn/wx/ry/ry_util.jsp"
@@ -89,9 +93,9 @@ def tianbao(list, params):
         if type == '1':
             params_u['szcsbm'] = list[4]
             params_u['szcsmc'] = list[5]
-        params_u['userLoginId'] = list[0]
+        params_u['userLoginId'] = username
         params_u['userName'] = list[2]
-        result = yqtb(list[0], list[1], list[2], params_u)
+        result = yqtb(list[2], params_u)
         if result:
             print(f'{list[2]} 疫情填报成功')
             pushplus(f'{list[2]} 疫情填报成功', list[6])

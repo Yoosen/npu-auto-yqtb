@@ -1,8 +1,8 @@
 [{
-    "username": "学号",
-    "password": "密码",
+    "username": "username",
+    "password": "password",
     "name": "姓名",
-    "is_home": "o或1，0为在学校，1为在家",
+    "is_home": "0",
     "city_code": "所在城市编码，一般为身份证前六位",
     "address": "家庭所在地，示例：xx省xx市xxx，具体参见疫情填报",
     "pushplus_token": "pushplus_token"
