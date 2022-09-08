@@ -1,5 +1,6 @@
 # 瓜大疫情填报
-使用 GitHub Acition 进行西北工业大学自动疫情填报
+
+![npu-auto-yqtb](https://socialify.git.ci/Yoosen/npu-auto-yqtb/image?description=1&font=KoHo&forks=1&pattern=Formal%20Invitation&stargazers=1&theme=Light)
 
 ## 使用须知
 
