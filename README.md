@@ -24,26 +24,40 @@
 
 ## 使用流程
 
-1. 点击项目右上角的`Fork`，`Fork` 此项目
+1. 点击项目右上角的`Fork`，`Fork`此项目
 
-2. 到自己Fork的项目点击`Settings`->`Secrets`->`Actions`->`New responsitory secrets`
+2. 到自己`Fork`的项目点击`Settings`->`Secrets`->`Actions`->`New responsitory secrets`
 
-3. 填写Name，和Value，需要添加以下两个
-   - USERNAME -> 学号
-   - PASSWORD -> 密码(仅该项目中保存使用，不会造成泄露)
+3. 填写`Name`，和`Secret`，需要添加以下两个
+   - **USERNAME** -> 学号
 
-4. 在"`Actions`"中点击"`Run workflow`"即可手动执行签到，后续运行按照`schedule`，默认在每天12:00(中午)自动签到，可自行修改
+     <img src="./img/secret.png" alt="secrt" style="zoom:80%;" />
 
-   > 更改 [main yaml](.github/workflows/main.yml) 中 cron 项即可填报更改时间
+   - **PASSWORD** -> 密码(仅该项目中保存使用，不会造成泄露，除非 Github 泄露)
+
+     <img src="./img/secret2.png" style="zoom:80%;" />
+
+4. 点击"`Actions`"，在左侧的"`自动疫情填报`" 点击"`Run workflow`"即可手动执行签到，后续可运行按照`schedule`(main yaml)，默认在每天12:00(中午)自动签到，可自行修改
+
+   ![](./img/action.png)
+
+   > 更改 [main yaml](.github/workflows/main.yml) 中 cron 项即可**更改填报时间**
    >
    > ``` yaml
    > schedule:
-   > # 此时间为 'UTF时间', +8h 后为 '北京时间'，即中午12点准时打卡
+   >    # 此时间为 'UTF时间', +8h 后为 '北京时间'，即中午12点准时打卡
    >    - cron: '0 4 * * *' 
    > ```
-   > 由于定时任务由Github调度, 实际执行时间可能延迟1-2h不定
+   > 定时任务由Github调度, 实际执行时间可能延迟1-2h不定
 
-5. 有问题可以提 `issue`
+5. ~~有问题可以提 `issue`~~
+
+
+
+## TODO
+
+- [ ] 在家状态
+- [ ] 推送服务
 
 
 
