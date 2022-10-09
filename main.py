@@ -30,7 +30,7 @@ def pushplus(msg: str, pushplus_token):
 
 def yqtb(name, params):
     session = requests.session()
-    url = "https://yqtb.nwpu.edu.cn/wx/ry/jrsb.jsp"
+    url = "https://yqtb.nwpu.edu.cn/wx/ry/jrsb_xs.jsp"
     post_url = "https://yqtb.nwpu.edu.cn/wx/ry/ry_util.jsp"
     login_url = "https://uis.nwpu.edu.cn/cas/login"
     login_data = {
