@@ -2,6 +2,12 @@
 
 ![npu-auto-yqtb](https://socialify.git.ci/Yoosen/npu-auto-yqtb/image?description=1&font=KoHo&forks=1&pattern=Formal%20Invitation&stargazers=1&theme=Light)
 
+## ❗️❗️❗️ 登陆时新添加了安全验证导致Action失效
+
+<img src="./img/certification.png" alt="certification" />
+
+
+
 **希望你永远不会再因未填报被艾特**
 
 ## 使用须知
