@@ -55,7 +55,7 @@ def yqtb(name, params):
         print(f"{name} login successfully")
     else:
         print(f"{name} login unsuccessfully")
-        exit(1)
+        # exit(1)
     res = ""
     for i in range(3):
         if len(res) == 0:
